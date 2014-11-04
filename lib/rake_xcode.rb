@@ -65,7 +65,7 @@ module RakeXcode
     end
 
     def package
-      sh "xcrun -sdk #@sdk PackageApplication -v #{app_path} --sign '#@identity' --embed '#@profile' -o '#{ipa_path}'"
+      sh "xcrun -sdk #@sdk PackageApplication -v #{app_path} --embed '#@profile' -o '#{ipa_path}'"
     end
 
     def add_testflight
